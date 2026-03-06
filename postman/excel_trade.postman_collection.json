@@ -1,0 +1,39 @@
+{
+  "info": {
+    "name": "Excel Upload Trade API",
+    "_postman_id": "4b1f2ad2-2f34-4f03-8dc4-06c02a0f00a1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Upload Excel & Trade",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "sample/sample_signals.xlsx"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://shivayconstructions.com/trading/pyapi/excel/upload-trade",
+          "protocol": "https",
+          "host": [
+            "shivayconstructions",
+            "com"
+          ],
+          "port": "8000",
+          "path": [
+            "excel",
+            "upload-trade"
+          ]
+        }
+      }
+    }
+  ]
+}
