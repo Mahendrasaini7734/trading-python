@@ -46,8 +46,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="StackEarn Excel Trading API",
-    lifespan=lifespan,
-    root_path="/trading/pyapi"
+    lifespan=lifespan
 )
 
 
@@ -60,9 +59,15 @@ def root():
     }
 
 
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://shivayconstructions.com/trading/pyapi"],
+    allow_origins=[
+        "https://shivayconstructions.com",
+        "https://www.shivayconstructions.com",
+        "https://trading.stackearn.com"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
