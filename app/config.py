@@ -1,7 +1,7 @@
 import os
 from pydantic_settings import BaseSettings
 from pydantic import Field
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 class Settings(BaseSettings):
     # ================= API Credentials =================
@@ -13,9 +13,10 @@ class Settings(BaseSettings):
     # ================= Database ================
 
 
-    DATABASE_URL: str = Field(
-        default=f"sqlite:///{BASE_DIR}/excel_trades.db"
-    )
+    # DATABASE_URL: str = Field(
+    #     default=f"sqlite:///{BASE_DIR}/excel_trades.db"
+    # )
+    DATABASE_URL: str = "sqlite:///./excel_trades.db"
     # ================= Trading Settings =================
     MAX_ORDERS_PER_UPLOAD: int = Field(default=50)
     DRY_RUN: bool = Field(default=False)

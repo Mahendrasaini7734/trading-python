@@ -84,7 +84,7 @@ class SmartAPIService:
             }
 
             # 🔥 Light mode instead of FULL
-            response = smart.getMarketData("LTP", exchange_tokens)
+            response = smart.getMarketData("FULL", exchange_tokens)
 
             if not response or not response.get("status"):
                 logger.error("❌ Batch LTP API invalid response")

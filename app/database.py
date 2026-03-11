@@ -29,11 +29,10 @@
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
-from app.config import settings
 
-DATABASE_URL = settings.DATABASE_URL
+# DATABASE_URL = settings.DATABASE_URL
 
-# DATABASE_URL = "sqlite:///./excel_trades.db"
+DATABASE_URL = "sqlite:///./excel_trades.db"
 
 engine = create_engine(
     DATABASE_URL,

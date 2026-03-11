@@ -59,7 +59,7 @@ def start_scheduler():
     # ==========================================
     scheduler.add_job(
         updater.update_all_markets,
-        CronTrigger(day_of_week=weekdays, hour=16, minute=23),
+        CronTrigger(day_of_week=weekdays, hour=19, minute=10),
         id="daily_open_price_job",
         replace_existing=True
     )

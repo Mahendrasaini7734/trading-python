@@ -59,9 +59,14 @@ def root():
     }
 
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://trading.stackearn.com"],
+    allow_origins=[
+        "https://trading.stackearn.com",
+        "http://127.0.0.1:8000",
+        "http://localhost:5173",   # add this
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
