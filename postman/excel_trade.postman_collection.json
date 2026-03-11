@@ -21,10 +21,10 @@
           ]
         },
         "url": {
-          "raw": "https://shivayconstructions.com/trading/pyapi/excel/upload-trade",
+          "raw": "https://trading.stackearn.com/excel/upload-trade",
           "protocol": "https",
           "host": [
-            "shivayconstructions",
+            "trading.stackearn",
             "com"
           ],
           "port": "8000",
